@@ -1,0 +1,296 @@
+body{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  border: solid;
+  height: 100%;  
+}
+
+$couleur_primaire: #FF6060;
+
+ul, li, a {
+  list-style: none;
+  font-style: none;
+  text-decoration: none;
+  color: $couleur_primaire;
+}
+
+.link_nav{
+  &:hover {
+    border-bottom: solid;
+  }
+}
+main{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.main_APropos {
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+
+
+}
+.header {
+  display : flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 20px 100px 0px 100px;
+  margin-left: 100px;
+  margin-right: 100px; 
+  
+   &__navigation {
+    width: 300px;
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-around;
+  } 
+}
+
+.footer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 134px;
+  color: white;
+  margin-top: 30px;
+}
+
+.Bienvenue {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 1240px;
+  height: 223px;
+  margin: 50px 0 20px 0;
+ 
+  border-radius: 15px;
+  background: url('../img/img_acceuil.png');
+  background-position: center center;
+  background-size: cover;
+  
+  
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    mix-blend-mode: darken;
+    border-radius: 15px;
+  }
+
+  &_titre{
+    position: absolute;
+    color: white;
+    font-size: 48px;
+    font-weight: 500;
+  }
+}
+
+.card_appartements {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-size: 340px 340px;
+  color: white;
+  border-radius: 15px;
+  width: 340px;
+  height: 340px;
+  margin: 20px 20px 20px 20px;
+ 
+  &_title {
+    margin-left: 15px;
+    font-size: 18px;
+  }
+}
+
+.contenant_card_appartements {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: #F6F6F6 ;
+  width: 1240px;
+  border-radius: 15px;
+}
+
+.logement{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  color: $couleur_primaire;
+
+ /*  &_cover {
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+  margin: 30px 100px 10px 100px;
+
+  }  */
+  &_main {
+    margin: 30px 100px 10px 100px;
+    width: 1240px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+  }
+
+  &_main_title{
+    margin: 0;
+    grid-area: 1 / 1 / 2 / 2; 
+    align-self: center;
+
+  }
+  &_main_city {
+    grid-area:   2 / 1 / 3 / 2; 
+    align-self: start;
+    margin-bottom: 30px;
+  }
+  &_main_hote {
+    margin: 0;
+    width: 230px;
+    grid-area:  1 / 2 / 2 / 3; 
+    font-size: 24px;
+    align-self: start;
+    justify-self: end;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+    &_photo {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+    }
+    &_name{
+      width: 126px;
+    }
+
+  }
+  
+}
+
+
+.logement_slideShow{
+  background-size: 1219px 415px;
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+  margin: 30px 100px 10px 100px;
+  color: white;
+  font-size: 79px; 
+  mix-blend-mode: normal;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+  
+}
+.arrow_gauche{
+  grid-area: 1 / 1 / 3 / 2; 
+  align-self: end ;
+  margin-bottom: 30px;
+}
+.arrow_droite{
+  grid-area: 1 / 2 / 3 / 3; 
+  align-self: end ;
+  justify-self: end;
+  margin-bottom: 30px;
+}
+.decompteSlide{
+  font-size: 25px;
+  grid-area: 3 / 1 / 4 / 3; 
+  justify-self: center;
+  align-self: center;
+}
+
+.tag{
+ display: flex; 
+ grid-area:   2 / 1 / 3 / 2; 
+ margin-top: 30px;
+ align-self: center;
+}
+.tag_content{
+  background-color: $couleur_primaire;
+  color: white;
+  border-radius: 8px;
+  padding: 4px 4px 4px 4px;
+  font-size: 15px;
+  width: fit-content;
+  height: fit-content;
+  margin-right: 5px;
+ 
+}
+
+.tagEquipement, .respect, .description, .responsabilite, .fiabilite, .service {
+  justify-self: end;
+  position:  relative;
+   display: flex;
+  flex-flow: row wrap;
+  align-items: center; 
+  background-color: $couleur_primaire;
+  grid-area: 3 / 2 / 4 / 3;
+  color: white;
+  height: 30px;
+  width: 550px;
+   margin-bottom: 30px; 
+  border-radius: 10px;
+  &_titre{
+    margin: 0;
+    margin-left: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 550px;
+  }
+  &_contenant {
+     display: none; 
+    position: absolute;
+    background-color: #F6F6F6;
+    color: $couleur_primaire;
+    top: 30px;
+    width: 550px;
+    padding: 30px 0 30px 0;
+    border-radius: 15px;
+  } 
+
+  &_equipement{
+    margin-left: 15px;
+  }
+
+  &_fleche_bas {
+    display: none;
+    margin-top: 2px;
+    margin-right: 15px;
+  }
+
+  &_fleche_haut {
+    margin-top: 2px;
+    margin-right: 15px;
+  }
+
+}
+
+.contenant_etoiles {
+  grid-area: 2 / 2 / 3 / 3;
+  justify-self: end;
+  font-size: 20px;
+  margin-right:  5px;
+  margin-top: 20px;
+}
+
