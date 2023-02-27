@@ -46,7 +46,9 @@ const SlideShow = (props) => {
             document.querySelector(".decompteSlide").innerHTML = `${indexImages + 1}/${tabUrlImages.length }`;
         }
     }
-    return (
+
+    if(images.length > 1 ) {
+      return (
       <div className="logement_slideShow" style={{backgroundImage: tabUrlImages[indexImages]}}>
         <FontAwesomeIcon
           icon={faChevronLeft}
@@ -57,6 +59,13 @@ const SlideShow = (props) => {
         <div className="decompteSlide">{indexImages + 1} / {tabUrlImages.length}</div>
       </div>
     );
+    } else {
+      return (
+        <div className="logement_slideShow" style={{backgroundImage: tabUrlImages[indexImages]}}>
+        </div>
+      );
+    }
+    
   };
 
 export default SlideShow;
