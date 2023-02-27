@@ -5,7 +5,7 @@ const APropos = () => {
   return (
     <main className="main main_APropos">
       <div
-        className="Bienvenue "
+        className="Bienvenue_main"
         style={{ backgroundImage: `url("${img}")` }}
       ></div>
       <div className="Apropos_contenant_collapse">

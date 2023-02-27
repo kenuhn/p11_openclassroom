@@ -18,7 +18,7 @@ const Collapse = (props) => {
     if (ouvert === false) {
       document.querySelector(`.${classNameContenant}`).style.display =
         "block";
-      document.querySelector(`.${propsNom}`).style.marginBottom = "180px"
+      document.querySelector(`.${propsNom}`).style.marginBottom = "210px"
       document.querySelector(`.${classNameFlecheHaut}`).style.display = "none";
       document.querySelector(`.${classNameFlecheBas}`).style.display = "block";
       setOuvert(true);
