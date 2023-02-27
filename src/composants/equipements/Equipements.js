@@ -18,16 +18,16 @@ const Equipements = (props) => {
       document.querySelector(".tagEquipement_contenant").style.display =
         "block";
         document.querySelector(".tagEquipement").style.marginBottom = "170px"
-        document.querySelector(".tagEquipement_fleche_bas").style.display = "none"
-        document.querySelector(".tagEquipement_fleche_haut").style.display = "block"
+        document.querySelector(".tagEquipement_fleche_bas").style.display = "block"
+        document.querySelector(".tagEquipement_fleche_haut").style.display = "none"
       setOuvert(true);
     } else {
       if (ouvert === true) {
         document.querySelector(".tagEquipement_contenant").style.display =
           "none";
           document.querySelector(".tagEquipement").style.marginBottom = "30px"
-          document.querySelector(".tagEquipement_fleche_haut").style.display = "none"
-          document.querySelector(".tagEquipement_fleche_bas").style.display = "block"
+          document.querySelector(".tagEquipement_fleche_haut").style.display = "block"
+          document.querySelector(".tagEquipement_fleche_bas").style.display = "none"
         setOuvert(false);
       }
     }

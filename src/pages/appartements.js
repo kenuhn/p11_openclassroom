@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import useLogement from "../utils/FetchLogement";
 import Equipements from "../composants/equipements/Equipements";
@@ -16,9 +15,9 @@ const Appartements = () => {
   }
 
   return (
+
     <main className="logement">
       <SlideShow images={logement.pictures} />
-      {/*  <img src={logement.cover} alt="Cover" className="logement_cover"></img> */}
       <div className="logement_main">
         <h1 className="logement_main_title">{logement.title}</h1>
         <p className="logement_main_city">{logement.location}</p>
@@ -35,8 +34,8 @@ const Appartements = () => {
          <Equipements equipements={logement.equipments}/>
          <Collapse description={logement.description}/>
       </div>
-    
     </main>
+
   );
 };
 

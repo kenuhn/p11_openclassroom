@@ -12,13 +12,13 @@ const Collapse = (props) => {
   let classNameFlecheBas = propsNom + "_fleche_bas" 
   let classNameFlecheHaut = propsNom + "_fleche_haut" 
 
- const [ouvert, setOuvert] = useState(true);
+ const [ouvert, setOuvert] = useState(false);
 
   const cliqueDescritpion = () => {
     if (ouvert === false) {
       document.querySelector(`.${classNameContenant}`).style.display =
         "block";
-        document.querySelector(`.${propsNom}`).style.marginBottom = "180px"
+      document.querySelector(`.${propsNom}`).style.marginBottom = "180px"
       document.querySelector(`.${classNameFlecheHaut}`).style.display = "none";
       document.querySelector(`.${classNameFlecheBas}`).style.display = "block";
       setOuvert(true);
@@ -36,7 +36,6 @@ const Collapse = (props) => {
   
 
     return (
-      <div>
         <div className={propsNom} onClick={cliqueDescritpion}>
           <p className={classNameContenantTitre}>
             {propsNom}
@@ -44,9 +43,8 @@ const Collapse = (props) => {
             <FontAwesomeIcon icon={faChevronUp} className={classNameFlecheHaut} />
           </p>
   
-          <div className={classNameContenant}> {propriete}</div>
+          <div className={classNameContenant}>{propriete}</div>
         </div>
-      </div>
     );
   
  

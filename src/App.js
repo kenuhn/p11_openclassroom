@@ -5,6 +5,7 @@ import FooterNav from "./composants/footer/footerNav";
 import Bienvenue from "./composants/main/Bienvenue";
 import Appartements from "./pages/appartements";
 import APropos from "./pages/APropos";
+import NotFound from "./pages/notFound";
 function App() {
   
   return (
@@ -18,7 +19,6 @@ function App() {
         } />
          <Route path="/logements/:id" element ={
         <>
-       {/*  <div> Salut</div> */}
            <Appartements /> 
         </>
         } />
@@ -27,6 +27,7 @@ function App() {
         <APropos />
         </>
         } />
+        <Route path='*' element={<NotFound />}/>
       </Routes>
       <FooterNav/> 
     </div>
