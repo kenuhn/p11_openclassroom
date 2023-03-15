@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from "./nav.js";
-import  Logo  from '/Users/kenuhnrimbert/p11-openclassroom/src/img/logo_kasa.png'
+import  Logo  from '../../img/logo_kasa.png'
 const Header = () => {
     
     return (

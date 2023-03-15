@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "/Users/kenuhnrimbert/p11-openclassroom/src/img/logo_kasa_white.png"
+import Logo from "../../img/logo_kasa_white.png"
 const footerNav = () => {
     return (
         <footer className="footer"> 

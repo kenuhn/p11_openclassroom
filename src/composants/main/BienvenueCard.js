@@ -6,7 +6,7 @@ const BienvenueCard = () => {
   useEffect(() => {
     const fetchLogements = async () => {
       const response = await fetch(
-        "http://127.0.0.1:5500/data/logements_data.json"
+        "http://127.0.0.1:5501/data/logements_data.json"
       );
       const data = await response.json();
       setLogements(data);

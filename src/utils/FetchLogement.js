@@ -5,7 +5,7 @@ const useLogement = (id) => {
     useEffect(() => {
       async function getData() {
         const response = await fetch(
-          "http://127.0.0.1:5500/data/logements_data.json"
+          "http://127.0.0.1:5501/data/logements_data.json"
         );
         const data = await response.json();
         const logementData = data.find((logement) => logement.id === id);
