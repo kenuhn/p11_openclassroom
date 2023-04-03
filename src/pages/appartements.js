@@ -5,13 +5,13 @@ import Etoiles from "../composants/etoiles/Etoiles";
 import Hashtag from "../composants/hastag.js/Hashtag";
 import SlideShow from "../composants/slideShow/SlideShow";
 import Collapse from "../composants/description/Collapse";
-
+import NotFound from "./notFound"
 
 const Appartements = () => {
   const  {id}  = useParams();
   const logement = useLogement(id);
   if (!logement) {
-    return <div>Loading...</div>;
+    return <NotFound />;
   }
 
   return (

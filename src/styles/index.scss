@@ -6,6 +6,7 @@ body, .App, #root{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-content: space-between;
 }
 
 $couleur_primaire: #FF6060;
