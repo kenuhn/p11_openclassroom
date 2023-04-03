@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kenuhn.github.io/p11_openclassroom/static/css/main.bc20369c.css",
+    "main.js": "/kenuhn.github.io/p11_openclassroom/static/js/main.c0bfc9d9.js",
+    "static/js/787.27607922.chunk.js": "/kenuhn.github.io/p11_openclassroom/static/js/787.27607922.chunk.js",
+    "static/media/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg": "/kenuhn.github.io/p11_openclassroom/static/media/kalen-emsley-Bkci_8qcdvQ-unsplash.161cc9194b8fa99b3ed4.jpg",
+    "static/media/img_acceuil.png": "/kenuhn.github.io/p11_openclassroom/static/media/img_acceuil.bdf55ca801972edcd992.png",
+    "index.html": "/kenuhn.github.io/p11_openclassroom/index.html",
+    "main.bc20369c.css.map": "/kenuhn.github.io/p11_openclassroom/static/css/main.bc20369c.css.map",
+    "main.c0bfc9d9.js.map": "/kenuhn.github.io/p11_openclassroom/static/js/main.c0bfc9d9.js.map",
+    "787.27607922.chunk.js.map": "/kenuhn.github.io/p11_openclassroom/static/js/787.27607922.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc20369c.css",
+    "static/js/main.c0bfc9d9.js"
+  ]
+}
