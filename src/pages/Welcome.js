@@ -1,5 +1,5 @@
 import React from "react";
-import WelcomeCard from "../composants/WelcomeCard/WelcomeCard";
+import WelcomeCard from "../Component/WelcomeCard/WelcomeCard";
 const Welcome = () => {
   return (
     <>

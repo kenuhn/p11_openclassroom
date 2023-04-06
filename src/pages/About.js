@@ -1,5 +1,5 @@
 import React from "react";
-import Collapse from "../composants/Collapse/Collapse";
+import Collapse from "../Component/Collapse/Collapse";
 import img from "../img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg";
 const About = () => {
   return (

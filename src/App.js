@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./composants/header/header";
-import FooterNav from "./composants/footer/Footer";
+import Header from "./Component/header/header";
+import FooterNav from "./Component/footer/Footer";
 import Bienvenue from "./pages/Welcome";
 import Appartements from "./pages/appartements";
 import APropos from "./pages/About";

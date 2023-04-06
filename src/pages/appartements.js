@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import useLogement from "../utils/FetchLogement";
-import Etoiles from "../composants/Stars/Stars";
-import Hashtag from "../composants/Hastag.js/Hashtag";
-import SlideShow from "../composants/slideShow/SlideShow";
-import Collapse from "../composants/Collapse/Collapse";
+import Etoiles from "../Component/Stars/Stars";
+import Hashtag from "../Component/Hastag.js/Hashtag";
+import SlideShow from "../Component/slideShow/SlideShow";
+import Collapse from "../Component/Collapse/Collapse";
 import NotFound from "./notFound";
 
 const Appartements = () => {
