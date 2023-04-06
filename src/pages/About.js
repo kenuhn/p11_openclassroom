@@ -1,7 +1,7 @@
 import React from "react";
-import Collapse from "../composants/description/Collapse";
+import Collapse from "../composants/Collapse/Collapse";
 import img from "../img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg";
-const APropos = () => {
+const About = () => {
   return (
     <main className="main main_APropos">
       <div
@@ -18,4 +18,4 @@ const APropos = () => {
   );
 };
 
-export default APropos;
+export default About;

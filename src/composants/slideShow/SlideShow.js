@@ -1,71 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import "@fortawesome/react-fontawesome";
-
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const SlideShow = (props) => {
+  const [indexImages, setIndexImages] = useState(0);
+
   const images = props.images;
-  const tabUrlImages = [];
-  let indexImages = 0;
-  images.forEach((img) => {
-    let url = `url("${img}")`;
-    tabUrlImages.push(url);
-    })   
-    let imagesSuperieur = () => {
-      
-        if (indexImages < tabUrlImages.length - 1) {
-            indexImages += 1;
-            console.log(indexImages);
-            document.querySelector(".logement_slideShow").style.backgroundImage =
-              tabUrlImages[indexImages];
-              document.querySelector(".decompteSlide").innerHTML = `${indexImages + 1}/${tabUrlImages.length }`;
-          } else {
-          
-              indexImages = 0;
-            console.log(indexImages);
-            document.querySelector(".logement_slideShow").style.backgroundImage =
-              tabUrlImages[indexImages];
-              document.querySelector(".decompteSlide").innerHTML = `${indexImages + 1}/${tabUrlImages.length }`;
-          } 
-          
-      
-    }
 
-     let imagesInferieur = () => {
-        if (indexImages > 0) {
-            indexImages += -1
-            document.querySelector(".logement_slideShow").style.backgroundImage =
-            tabUrlImages[indexImages];
-            document.querySelector(".decompteSlide").innerHTML = `${indexImages + 1}/${tabUrlImages.length }`;
-        } else {
-            indexImages = tabUrlImages.length -1
-            document.querySelector(".logement_slideShow").style.backgroundImage =
-            tabUrlImages[indexImages];
-            document.querySelector(".decompteSlide").innerHTML = `${indexImages + 1}/${tabUrlImages.length }`;
-        }
-    }
+  const tabUrlImages = images.map((img) => {
+    return `url("${img}")`;
+  });
 
-    if(images.length > 1 ) {
-      return (
-      <div className="logement_slideShow" style={{backgroundImage: tabUrlImages[indexImages]}}>
+  const imagesSuperieur = () => {
+    setIndexImages((prevIndex) =>
+      prevIndex < tabUrlImages.length - 1 ? prevIndex + 1 : 0
+    );
+  };
+
+  const imagesInferieur = () => {
+    setIndexImages((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : tabUrlImages.length - 1
+    );
+  };
+
+  if (images.length > 1) {
+    return (
+      <div
+        className="logement_slideShow"
+        style={{ backgroundImage: tabUrlImages[indexImages] }}
+      >
         <FontAwesomeIcon
           icon={faChevronLeft}
           className="arrow_gauche"
           onClick={imagesInferieur}
         />
-        <FontAwesomeIcon icon={faChevronRight}  className="arrow_droite" onClick={imagesSuperieur} />
-        <div className="decompteSlide">{indexImages + 1} / {tabUrlImages.length}</div>
+        <FontAwesomeIcon
+          icon={faChevronRight}
+          className="arrow_droite"
+          onClick={imagesSuperieur}
+        />
+        <div className="decompteSlide">
+          {indexImages + 1} / {tabUrlImages.length}
+        </div>
       </div>
     );
-    } else {
-      return (
-        <div className="logement_slideShow" style={{backgroundImage: tabUrlImages[indexImages]}}>
-        </div>
-      );
-    }
-    
-  };
+  } else {
+    return (
+      <div
+        className="logement_slideShow"
+        style={{ backgroundImage: tabUrlImages[indexImages] }}
+      ></div>
+    );
+  }
+};
 
 export default SlideShow;

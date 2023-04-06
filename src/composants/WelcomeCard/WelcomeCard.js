@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-const BienvenueCard = () => {
+const WelcomeCard = () => {
   const [logements, setLogements] = useState([]);
 
   useEffect(() => {
     const fetchLogements = async () => {
       const response = await fetch(
-        "http://127.0.0.1:5501/data/logements_data.json"
+       `${process.env.REACT_APP_ADRESSE}/data/logements_data.json`
       );
       const data = await response.json();
       setLogements(data);
@@ -27,4 +27,4 @@ const BienvenueCard = () => {
   );
 };
 
-export default BienvenueCard;
+export default WelcomeCard;

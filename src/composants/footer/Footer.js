@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../img/logo_kasa_white.png"
-const footerNav = () => {
+const Footer = () => {
     return (
         <footer className="footer"> 
           <img src={Logo} alt="Logo"></img>
@@ -9,4 +9,4 @@ const footerNav = () => {
     )
 }
 
-export default footerNav
+export default Footer

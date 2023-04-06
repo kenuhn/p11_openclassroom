@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-const Etoiles = (props) => {
+const Stars = (props) => {
     const etoiles = props.etoiles
     let elEtoilesColore =[]
     let elEtoileGris = []
@@ -20,4 +20,4 @@ const Etoiles = (props) => {
     );
 };
 
-export default Etoiles;
+export default Stars;

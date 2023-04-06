@@ -1,16 +1,16 @@
 import React from "react";
-import BienvenueCard from "./BienvenueCard";
-const Bienvenue = () => {
+import WelcomeCard from "../composants/WelcomeCard/WelcomeCard";
+const Welcome = () => {
   return (
     <>
       <main>
         <div className="Bienvenue">
           <p className="Bienvenue_titre">Chez vous, partout et ailleurs</p>
         </div>
-        <BienvenueCard />
+        <WelcomeCard />
       </main>
     </>
   );
 };
 
-export default Bienvenue;
+export default Welcome;

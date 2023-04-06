@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./composants/header/header";
-import FooterNav from "./composants/footer/footerNav";
-import Bienvenue from "./composants/main/Bienvenue";
+import FooterNav from "./composants/footer/Footer";
+import Bienvenue from "./pages/Welcome";
 import Appartements from "./pages/appartements";
-import APropos from "./pages/APropos";
+import APropos from "./pages/About";
 import NotFound from "./pages/notFound";
 function App() {
   

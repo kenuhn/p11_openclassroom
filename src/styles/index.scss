@@ -246,7 +246,7 @@ main{
  
 }
 
-.tagEquipement, .respect, .description, .responsabilite, .fiabilite, .service {
+.equipements, .respect, .description, .responsabilite, .fiabilite, .service {
   justify-self: end;
   position:  relative;
    display: flex;
@@ -295,7 +295,7 @@ main{
 
 }
 
-.tagEquipement {
+.equipements {
   justify-self: start;
   grid-area: 3 / 1 / 4 / 2;
 }
@@ -509,7 +509,7 @@ main{
       height: 15px;
      }
 
-    .tagEquipement {
+    .equipements {
       grid-area: 5 / 1 / 6 / 2;
       justify-self: center;
       width: 100%;
